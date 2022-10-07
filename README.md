@@ -1,0 +1,1 @@
+# connect-django-mongo-curd
