@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+{% block title%} Add note here. {% endblock %}
+{% block  body%} 
+nopo
+<form action="/addToDo/" method="POST">{% csrf_token %}
+ 
+<div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label">Title</label>
+    <input type="text" class="form-control"  id="formGroupExampleInput" name="title" placeholder="title">
+  </div>
+  <div class="mb-3">
+    <label for="formGroupExampleInput2" class="form-label">Description</label>
+    <input type="text" class="form-control"  id="formGroupExampleInput2" name="desc"  placeholder="description">
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary">Add</button>
+  </div>
+</form>
+{% endblock %}  

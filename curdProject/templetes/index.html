@@ -1,0 +1,43 @@
+{% extends 'base.html'%}
+{% block title%} This is  home {% endblock %}
+{% block  body%}
+
+<a href="addToDo">
+  
+    <button class="btn btn-primary">Add New Todo</button>
+</a>
+ 
+<br>
+{{data}}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+       {% for item in data %}
+      <tr>
+        <th scope="row">1</th>
+        <td>{{item.title}}</td>
+        <td>{{item.desc}}</td>
+       
+      </tr>
+    {% endfor %}
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+{% endblock %}  
